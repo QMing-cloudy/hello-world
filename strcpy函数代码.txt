@@ -1,10 +1,8 @@
 char * strcpy(char *dst,const char *src)
 {
     assert(dst != NULL && src != NULL); 
-
-    char *ret = dst;  //[3]
-
-    while ((*dst++=*src++)!='\0'); //[4]
-
+    char *ret = dst;
+    while ((*dst++=*src++)!='\0');
     return ret;
 }
+//远程commit
