@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<curl/curl.h>
-int main()
+int main(void)
 {
   CURL *curl;
   CURLcode res;
@@ -11,7 +11,7 @@ int main()
     res=curl_easy_perform(curl);
     if(res!=CURLE_OK)
       fprintf(stderr,"curl_easy_perform() failed:%s\n",curl_easy_strerror(res));
-    curl_easy_Cleanup(curl);
+    curl_easy_cleanup(curl);
   }
   return 0;
 }
